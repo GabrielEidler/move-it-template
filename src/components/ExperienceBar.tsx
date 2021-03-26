@@ -6,7 +6,8 @@ export function ExperienceBar() {
     let progressString = `${progress}%`
 
     const levelUp = () => {
-        setProgress(progress + 10)
+        if(progress < 100) setProgress(progress + 10);
+        if(progress === 100) setProgress(0);
     }
 
     return(
@@ -16,7 +17,7 @@ export function ExperienceBar() {
                 <div style={{width: progressString}} />
 
                 <span className="current-experience" style={{left: progressString}}>
-                    {progress} xp
+                    {progressString}
                 </span>
             </div>
             <span>600 xp</span>
