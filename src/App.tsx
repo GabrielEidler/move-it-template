@@ -1,13 +1,18 @@
 import React from 'react';
-import { ExperienceBar } from './components/ExperienceBar'
+import { NewStockForm } from './components/NewStockForm';
+import { ScaleForm } from './components/ScaleForm';
 
 import './styles/global.css'
 
 function App() {
   return (
-    <div className="container">
-      <ExperienceBar/>
-    </div>
+    <>
+      <div className="header-bg"></div>
+      <div className="container">
+        {/* < NewStockForm />  */}
+        < ScaleForm />
+      </div>
+    </>
   );
 }
 
