@@ -2,6 +2,7 @@
 interface TargetStop{
     type: string;
     function: Function;
+    index: number;
 }
 
 export function TargetStop (props:TargetStop){
@@ -30,23 +31,9 @@ export function TargetStop (props:TargetStop){
                         <a onClick={() => {props.function()}} > + Add More {props.type}</a>
                     </div>
                 </div>
-                <p style={{paddingLeft: '10px',paddingRight: '10px', position: 'relative', top: '-10px'}}><strong>{props.type}</strong></p>
+                <p style={{paddingLeft: '15px',paddingRight: '0px', position: 'relative', top: '-20px', minWidth: '15%', fontSize: '24px'}}><strong>{props.type} {props.index}</strong></p>
                 <div className="column" style={{borderTop: '1px gray solid'}}>
-                    <div className="row">
-                        <div className="input-wrapper">
-                            <input type="text" name="name" placeholder="Percentage Gain/Loss" required/>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-wrapper">
-                            <input type="text" name="name" placeholder="Current Gain/Loss" required/>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-wrapper">
-                            <input type="text" name="name" placeholder="R:R" required/>
-                        </div>
-                    </div>
+                    {/* EMPTY */}
                 </div>
             </div>
     )
